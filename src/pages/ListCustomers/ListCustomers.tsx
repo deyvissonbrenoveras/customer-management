@@ -4,12 +4,14 @@ import { AppDispatch, RootState } from "../../redux/store";
 import './ListCustomers.css';
 
 import {removeCustomer} from "../../redux/customer/customerSlice";
+import { toast } from "react-toastify";
 
 function ListCustomers() {    
     const dispatch = useDispatch<AppDispatch>()
 
     const deleteCustomer = (cnpj: string) => {
         dispatch(removeCustomer(cnpj))
+        toast.success('Cliente excluído com sucesso!')
     }
 
     const customers = useSelector((state: RootState) => state.customer.list)

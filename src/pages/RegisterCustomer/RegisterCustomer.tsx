@@ -7,6 +7,7 @@ import { Customer } from "../../types/Customer";
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from "../../redux/store";
 import { addCustomer } from "../../redux/customer/customerSlice";
+import { toast } from "react-toastify";
 
 function RegisterCustomer() {
 
@@ -17,6 +18,7 @@ function RegisterCustomer() {
     console.log(data);
     dispatch(addCustomer(data))
     reset()
+    toast.success('Cliente cadastrado com sucesso!')
   }
 
 
