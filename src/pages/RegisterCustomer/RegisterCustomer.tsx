@@ -4,12 +4,18 @@ import SubmitButton from "../../components/Form/SubmitButton/SubmitButton";
 
 import './RegisterCustomer.css'
 import { Customer } from "../../types/Customer";
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from "../../redux/store";
+import { addCustomer } from "../../redux/customer/customerSlice";
 
 function RegisterCustomer() {
 
+  const dispatch = useDispatch<AppDispatch>()
   const { register, handleSubmit, formState: { errors } } = useForm<Customer>();
+  
   const onSubmit = (data: Customer) => {
     console.log(data);
+    dispatch(addCustomer(data))
   }
 
 
