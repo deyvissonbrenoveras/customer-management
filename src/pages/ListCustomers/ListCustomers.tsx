@@ -1,11 +1,17 @@
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../redux/store";
 
 import './ListCustomers.css';
 
+import {removeCustomer} from "../../redux/customer/customerSlice";
 
+function ListCustomers() {    
+    const dispatch = useDispatch<AppDispatch>()
 
-function ListCustomers() {
+    const deleteCustomer = (cnpj: string) => {
+        dispatch(removeCustomer(cnpj))
+    }
+
     const customers = useSelector((state: RootState) => state.customer.list)
   return (
     <div id='register-customer-container'>
@@ -19,6 +25,7 @@ function ListCustomers() {
                 <th>Endereço</th>
                 <th>Cidade</th>
                 <th>Estado</th>
+                <th>Excluir</th>
             </tr>
             </thead>
             <tbody>
@@ -30,6 +37,7 @@ function ListCustomers() {
                     <td>{customer.address}</td>
                     <td>{customer.city}</td>
                     <td>{customer.state}</td>
+                    <td><button className="delete-button" onClick={()=> {deleteCustomer(customer.cnpj)}}>x</button></td>
                 </tr>
             ))}
             </tbody>

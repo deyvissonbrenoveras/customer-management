@@ -11,11 +11,12 @@ import { addCustomer } from "../../redux/customer/customerSlice";
 function RegisterCustomer() {
 
   const dispatch = useDispatch<AppDispatch>()
-  const { register, handleSubmit, formState: { errors } } = useForm<Customer>();
-  
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<Customer>();
+
   const onSubmit = (data: Customer) => {
     console.log(data);
     dispatch(addCustomer(data))
+    reset()
   }
 
 
