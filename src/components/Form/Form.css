@@ -1,8 +1,13 @@
 
 .input-field {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 10px 0;
+    margin: 10px;
+
+    > span {
+        color: rgb(223, 18, 18);
+    }
 }
 
 .label {

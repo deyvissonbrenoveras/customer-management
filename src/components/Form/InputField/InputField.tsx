@@ -1,6 +1,6 @@
 import { UseFormRegister, FieldError, FieldValues, Path } from 'react-hook-form';
 
-import '../form.css'
+import '../Form.css'
 
 interface InputFieldProps<T extends FieldValues> {
   label: string;
@@ -30,7 +30,7 @@ const InputField = <T extends FieldValues>({
         {...register(name, validation)}
         className="input" 
       />
-      {errors && <p>{errors.message}</p>}
+      {errors && <span>{errors.message}</span>}
     </div>
   );
 };
