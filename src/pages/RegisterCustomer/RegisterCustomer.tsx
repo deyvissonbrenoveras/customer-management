@@ -3,20 +3,12 @@ import InputField from "../../components/Form/InputField/InputField";
 import SubmitButton from "../../components/Form/SubmitButton/SubmitButton";
 
 import './RegisterCustomer.css'
-
-interface CustomerFormData {
-  companyName: string;
-  cnpj: string;
-  socialReason: string;
-  address: string;
-  city: string;
-  state: string;
-}
+import { Customer } from "../../types/Customer";
 
 function RegisterCustomer() {
 
-  const { register, handleSubmit, formState: { errors } } = useForm<CustomerFormData>();
-  const onSubmit = (data: CustomerFormData) => {
+  const { register, handleSubmit, formState: { errors } } = useForm<Customer>();
+  const onSubmit = (data: Customer) => {
     console.log(data);
   }
 
