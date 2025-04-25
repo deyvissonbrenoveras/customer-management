@@ -1,28 +1,38 @@
 {
-    "select_option": "Selecione uma opção no menu lateral",
     "app_name": "Cliente +",
     "customer_management": "Gerenciamento de clientes",
     "home": "Início",
-    "register_customer": "Cadastrar Cliente",
-    "list_customers": "Listar Clientes",
-    "company_name": "Nome fantasia",
-    "company_name_required": "O nome fantasia é obrigatório",
-    "social_reason": "Razão social",
-    "social_reason_required": "A Razão social é obrigatória",
-    "cnpj": "CNPJ",
-    "cnpj_required": "O CNPJ é obrigatório",
-    "invalid_cnpj": "CNPJ Inválido",
-    "address": "Endereço",
-    "address_required": "Endereço é obrigatório",
-    "city": "Cidade",
-    "city_required": "A cidade é obrigatória",
-    "state": "Estado",
-    "state_required": "O Estado é obrigatório",
-    "save": "Salvar",
-    "customer_registered_successfully": "Cliente cadastrado com sucesso!",
-    "registered_customers": "Clientes cadastrados",
-    "delete": "Excluir",
-    "customer_deleted_successfully": "Cliente excluído com sucesso!",
-    "welcome": "Bem vindo ao sistema de gerenciamento de clientes!",
-    "register": "Registrar"
+    "form": {
+        "company_name": "Nome fantasia",
+        "social_reason": "Razão social",
+        "cnpj": "CNPJ",
+        "address": "Endereço",
+        "city": "Cidade",
+        "state": "Estado",
+        "save": "Salvar",
+        "errors": {
+            "company_name_required": "O nome fantasia é obrigatório",
+            "social_reason_required": "A Razão social é obrigatória",
+            "cnpj_required": "O CNPJ é obrigatório",
+            "invalid_cnpj": "CNPJ Inválido",
+            "address_required": "Endereço é obrigatório",
+            "city_required": "A cidade é obrigatória",
+            "state_required": "O Estado é obrigatório"
+        }
+    },
+    "messages": {
+        "customer_registered_successfully": "Cliente cadastrado com sucesso!",
+        "customer_deleted_successfully": "Cliente excluído com sucesso!"
+    },
+    "pages": {
+        "register_customer": "Cadastrar Cliente",
+        "list_customers": "Listar Clientes",
+        "registered_customers": "Clientes cadastrados",
+        "welcome": "Bem vindo ao sistema de gerenciamento de clientes!",
+        "register": "Registrar"
+    },
+    "actions": {
+        "delete": "Excluir"
+    },
+    "select_option": "Selecione uma opção no menu lateral"
 }

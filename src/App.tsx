@@ -26,8 +26,8 @@ function App() {
           <div id="sidebar">
             <ul>
               <li><Link to="/">{t('home')}</Link></li>
-              <li><Link to="/cadastrar">{t('register_customer')}</Link></li>
-              <li><Link to="/listar">{t('list_customers')}</Link></li>
+              <li><Link to="/cadastrar">{t('pages.register_customer')}</Link></li>
+              <li><Link to="/listar">{t('pages.list_customers')}</Link></li>
             </ul>
           </div>
           <div id="content">

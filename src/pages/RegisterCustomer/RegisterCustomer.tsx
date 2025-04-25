@@ -19,72 +19,72 @@ function RegisterCustomer() {
     console.log(data);
     dispatch(addCustomer(data))
     reset()
-    toast.success(t('customer_registered_successfully'));
+    toast.success(t('messages.customer_registered_successfully'));
   }
 
   return (
     <div id='register-customer-container'>
-      <h1>{t('register')}</h1>
+      <h1>{t('pages.register')}</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
       <InputField
-        label={t('company_name')}
+        label={t('form.company_name')}
         name="companyName"
         register={register}
-        validation={{ required: t('company_name_required') }}
+        validation={{ required: t('form.errors.company_name_required') }}
         errors={errors.companyName}
       />
 
       <InputField
-        label={t('social_reason')}
+        label={t('form.social_reason')}
         name="socialReason"
         register={register}
-        validation={{ required: t('social_reason_required') }}
+        validation={{ required: t('form.errors.social_reason_required') }}
         errors={errors.socialReason}
       />
 
       <div className="input-field-group">
           <InputField
-            label={t('cnpj')}
+            label={t('form.cnpj')}
             name="cnpj"
             register={register}
             validation={{
-              required: t('cnpj_required'),
+              required: t('form.errors.cnpj_required'),
               pattern: {
                 value: /^\d{14}$/,
-                message: t('invalid_cnpj')
+                message: t('form.errors.invalid_cnpj')
               }
             }}
             errors={errors.cnpj}
           />
 
           <InputField
-            label={t('address')}
+            label={t('form.address')}
             name="address"
             register={register}
-            validation={{ required: t('address_required') }}
+            validation={{ required: t('form.errors.address_required') }}
             errors={errors.address}
           />
       </div>
 
       <div className="input-field-group">     
           <InputField
-            label={t('city')}
+            label={t('form.city')}
             name="city"
             register={register}
-            validation={{ required: t('city_required') }}
+            validation={{ required: t('form.errors.city_required') }}
             errors={errors.city}
           />
 
           <InputField
-            label={t('state')}
+            label={t('form.state')}
             name="state"
             register={register}
-            validation={{ required: t('state_required') }}
+            validation={{ required: t('form.errors.state_required') }}
             errors={errors.state}
           />
       </div>
 
-      <SubmitButton label={t('save')}/>
+      <SubmitButton label={t('form.save')}/>
     </form>
     </div>
   );

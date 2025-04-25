@@ -13,23 +13,23 @@ function ListCustomers() {
 
     const deleteCustomer = (cnpj: string) => {
         dispatch(removeCustomer(cnpj));
-        toast.success(t('customer_deleted_successfully'));
+        toast.success(t('messages.customer_deleted_successfully'));
     };
 
     const customers = useSelector((state: RootState) => state.customer.list);
     return (
         <div id='register-customer-container'>
-            <h1>{t('registered_customers')}</h1>
+            <h1>{t('pages.registered_customers')}</h1>
             <table className="list-customers-table">
                 <thead>
                     <tr>
-                        <th>{t('company_name')}</th>
-                        <th>{t('social_reason')}</th>
-                        <th>{t('cnpj')}</th>
-                        <th>{t('address')}</th>
-                        <th>{t('city')}</th>
-                        <th>{t('state')}</th>
-                        <th>{t('delete')}</th>
+                        <th>{t('form.company_name')}</th>
+                        <th>{t('form.social_reason')}</th>
+                        <th>{t('form.cnpj')}</th>
+                        <th>{t('form.address')}</th>
+                        <th>{t('form.city')}</th>
+                        <th>{t('form.state')}</th>
+                        <th>{t('actions.delete')}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,7 +43,7 @@ function ListCustomers() {
                             <td>{customer.state}</td>
                             <td>
                                 <button className="delete-button" onClick={() => deleteCustomer(customer.cnpj)}>
-                                    {t('delete')}
+                                    {t('actions.delete')}
                                 </button>
                             </td>
                         </tr>

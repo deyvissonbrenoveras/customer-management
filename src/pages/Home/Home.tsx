@@ -5,7 +5,7 @@ function Home() {
 
   return (
     <div>
-      <h1>{t('welcome')}</h1>
+      <h1>{t('pages.welcome')}</h1>
       <p>{t('select_option')}</p>
     </div>
   );
