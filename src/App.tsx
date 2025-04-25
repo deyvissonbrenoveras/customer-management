@@ -5,6 +5,7 @@ import Home from './pages/Home/Home'
  import { Link } from 'react-router-dom'
 import RegisterCustomer from './pages/RegisterCustomer/RegisterCustomer'
 import ListCustomers from './pages/ListCustomers/ListCustomers'
+import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher'
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
             <img src={logo} alt="logo" id="logo" />      
             <div>Cliente +</div>
           </Link>
-          <h1>Gerenciamento de clientes</h1>   
+          <h1>Gerenciamento de clientes</h1>  
+          <LanguageSwitcher /> 
         </div>
         <div id='container'>
           <div id="sidebar">
