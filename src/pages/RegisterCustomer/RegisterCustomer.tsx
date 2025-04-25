@@ -8,9 +8,10 @@ import { useDispatch } from 'react-redux'
 import { AppDispatch } from "../../redux/store";
 import { addCustomer } from "../../redux/customer/customerSlice";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 function RegisterCustomer() {
-
+  const { t } = useTranslation();
   const dispatch = useDispatch<AppDispatch>()
   const { register, handleSubmit, formState: { errors }, reset } = useForm<Customer>();
 
@@ -18,73 +19,72 @@ function RegisterCustomer() {
     console.log(data);
     dispatch(addCustomer(data))
     reset()
-    toast.success('Cliente cadastrado com sucesso!')
+    toast.success(t('customer_registered_successfully'));
   }
-
 
   return (
     <div id='register-customer-container'>
-      <h1>Registrar</h1>
+      <h1>{t('register')}</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
       <InputField
-        label="Nome fantasia"
+        label={t('company_name')}
         name="companyName"
         register={register}
-        validation={{ required: 'O nome fantasia é obrigatório' }}
+        validation={{ required: t('company_name_required') }}
         errors={errors.companyName}
       />
 
       <InputField
-        label="Razão social"
+        label={t('social_reason')}
         name="socialReason"
         register={register}
-        validation={{ required: 'A Razão social é obrigatória' }}
+        validation={{ required: t('social_reason_required') }}
         errors={errors.socialReason}
       />
 
       <div className="input-field-group">
           <InputField
-            label="CNPJ"
+            label={t('cnpj')}
             name="cnpj"
             register={register}
             validation={{
-              required: 'O CNPJ é obrigatório',
+              required: t('cnpj_required'),
               pattern: {
                 value: /^\d{14}$/,
-                message: 'CNPJ Inválido'
+                message: t('invalid_cnpj')
               }
             }}
             errors={errors.cnpj}
           />
 
           <InputField
-            label="Endereço"
+            label={t('address')}
             name="address"
             register={register}
-            validation={{ required: 'Endereço é obrigatório' }}
+            validation={{ required: t('address_required') }}
             errors={errors.address}
           />
       </div>
 
       <div className="input-field-group">     
           <InputField
-            label="Cidade"
+            label={t('city')}
             name="city"
             register={register}
-            validation={{ required: 'A cidade é obrigatória' }}
+            validation={{ required: t('city_required') }}
             errors={errors.city}
           />
 
           <InputField
-            label="Estado"
+            label={t('state')}
             name="state"
             register={register}
-            validation={{ required: 'O Estado é obrigatório' }}
+            validation={{ required: t('state_required') }}
             errors={errors.state}
           />
       </div>
 
-      <SubmitButton label='Salvar'/>
+      <SubmitButton label={t('save')}/>
     </form>
     </div>
   );

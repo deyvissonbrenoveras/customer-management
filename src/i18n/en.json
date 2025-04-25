@@ -1,3 +1,29 @@
 {
-    "welcome": "Welcome to the customer management system!"
+    "select_option": "Select an option from the sidebar",
+    "app_name": "Customer +",
+    "customer_management": "Customer Management",
+    "home": "Home",
+    "register_customer": "Register Customer",
+    "list_customers": "List Customers",
+    "company_name": "Company Name",
+    "company_name_required": "Company name is required",
+    "social_reason": "Social Reason",
+    "social_reason_required": "Social reason is required",
+    "cnpj": "CNPJ",
+    "cnpj_required": "CNPJ is required",
+    "invalid_cnpj": "Invalid CNPJ",
+    "address": "Address",
+    "address_required": "Address is required",
+    "city": "City",
+    "city_required": "City is required",
+    "state": "State",
+    "state_required": "State is required",
+    "save": "Save",
+    "customer_registered_successfully": "Customer registered successfully!",
+    "registered_customers": "Registered Customers",
+    "delete": "Delete",
+    "customer_deleted_successfully": "Customer deleted successfully!",
+    "welcome": "Welcome to the customer management system!",
+    "register": "Register"
+    
 }
