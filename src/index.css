@@ -1,0 +1,33 @@
+#root {
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 30px 20px;
+
+  color-scheme: light dark;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(135deg, #01B636, #3BD16F, #74E39A);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: auto;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+}
