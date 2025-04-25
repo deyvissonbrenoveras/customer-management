@@ -1,0 +1,38 @@
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ccc;
+    color: #000;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 150px;
+}
+
